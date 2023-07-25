@@ -85,7 +85,7 @@ export default {
     }
   },
   mounted() {
-    this.socket = io('http://doodle-api.barkle.chat');
+    this.socket = io('https://doodle-api.barkle.chat');
     this.socket.on('draw', (data) => {
       this.drawLine(data.startX, data.startY, data.endX, data.endY, data.penSize, false, data.isEraser);
     });
